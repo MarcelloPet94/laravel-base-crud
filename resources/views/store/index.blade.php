@@ -4,15 +4,15 @@
 @section('content')
 
 <table>
-  @foreach ($allComics as $book)
+  @foreach ($allComics as $comic)
     <tr>
-        <td>{{ $book->title }}</td>
-        <td>{{ $book->description }}</td>
-        <td>{{ $book->price }}</td>
-        <td>{{ $book->series }}</td>
-        <td>{{ $book->sale_date }}</td>
-        <td>{{ $book->type }}</td>
-        <td><a href="{{ route('storebooks.show' , $book->id) }}" target="_blank" >vedi</a></td>
+        <td>{{ $comic->title }}</td>
+        <td>{{ $comic->description }}</td>
+        <td>{{ $comic->price }}</td>
+        <td>{{ $comic->series }}</td>
+        <td>{{ $comic->sale_date }}</td>
+        <td>{{ $comic->type }}</td>
+        <td><a href="{{ route('comic.show' , $comic->id) }}" target="_blank" >vedi</a></td>
     </tr>
     @endforeach
 </table>
