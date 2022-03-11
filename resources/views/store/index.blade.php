@@ -17,7 +17,7 @@
         <td>{{ $comic->type }}</td>
         <td>
           <a href="{{ route('comic.show' , $comic->id) }}" target="_blank" >vedi</a>
-
+          <a href="{{route("comic.edit", $comic->id)}}" target="_blank" >modifica</a>
           <form action="{{ route('comic.destroy', $comic->id) }}" method="post">
             @csrf
             @method("DELETE")

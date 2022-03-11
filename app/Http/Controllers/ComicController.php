@@ -87,11 +87,13 @@ class ComicController extends Controller
      */
     public function update(Request $request, Comic $comic)
     {
+        /* var_dump($comic); */
+        
         $dataComics = $request->all();
         $comic->update($dataComics);
 
 
-        return redirect()->route('store.show', $comic->id);
+        return redirect()->route('comic.show', $comic->id);
     }
 
     /**
