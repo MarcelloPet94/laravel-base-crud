@@ -1,9 +1,10 @@
 
 @extends('layout.base')
 @section('content')
-<h1>Modifica prodotto: {{ $comic->name }}</h1>
-
-<form action="{{route("comic.update", $comic->id)}}" method="POST">
+<div class="setting_backoffice">
+    <h1>Modifica prodotto: {{ $comic->name }}</h1>
+</div>
+<form action="{{route("comic.update", $comic->id)}}" method="POST" class="setting_backoffice">
   @csrf
   @method('PUT')
 
@@ -19,7 +20,7 @@
     <option value="comic book" {{$comic->type == "comic book"? "selected": ""}}>comic book</option>
   </select><br>
 
-  <button type="submit" value="Submit" placeholder="prodotto"> Salva modifiche </button>
+  <button class="save_btn" type="submit" value="Submit" placeholder="prodotto"> Salva modifiche </button>
 
 </form> 
 @endsection
